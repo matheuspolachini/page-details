@@ -14,12 +14,6 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 
-export const revalidate = 60;
-
-export function generateStaticParams() {
-  return [];
-}
-
 const getAndCacheTLSCertificate = unstable_cache(
   async (url) => getTLSCertificate(url, 443),
   ["tls-certificate"],
